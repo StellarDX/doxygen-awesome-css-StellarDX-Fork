@@ -27,24 +27,77 @@ SOFTWARE.
 
 */
 
+@font-face
+{
+    font-family: 'HarmonyOS Sans'; /* 鸿蒙字体 */
+    src: url('HarmonyOS_Sans_SC_Black.ttf') format('ttf'),
+         url('HarmonyOS_Sans_SC_Bold.ttf') format('ttf'),
+         url('HarmonyOS_Sans_SC_Light.ttf') format('ttf'),
+         url('HarmonyOS_Sans_SC_Medium.ttf') format('ttf'),
+         url('HarmonyOS_Sans_SC_Regular.ttf') format('ttf'),
+         url('HarmonyOS_Sans_SC_Thin.ttf') format('ttf');
+}
+
 html {
-    /* 中国传统色 */
-    --zh-color-ganyu: rgb(0, 61, 116);
-    --zh-color-yuebai: rgb(212, 229, 239);
+    /* 中国传统色 (StellarDX) */
+    --zh-color-ganyu: rgb(0, 61, 116); /* 绀宇 */
+    --zh-color-yuebai: rgb(212, 229, 239); /* 月白 */
+    --zh-color-jiaoyu: rgb(235, 238, 232); /* 皦玉 */
+    --zh-color-ningzhi: rgb(245, 242, 233); /* 凝脂 */
+    --zh-color-qingming: rgb(50, 113, 174); /* 青冥 */
+    --zh-color-mushanzi: rgb(164, 171, 214); /* 暮山紫 */
+    --zh-color-pinyue: rgb(138, 171, 204); /* 品月 */
+    --zh-color-jinse: rgb(234, 205, 118); /* 金色 */
+    --zh-color-qunqing: rgb(46, 89, 167); /* 群青 */
+    --zh-color-hanbaiyu: rgb(248, 243, 237); /* 汉白玉 */
+    --zh-color-qinghui: rgb(44, 50, 62); /* 青灰 */
+    --zh-color-muyunhui: rgb(134, 138, 147); /* 暮云灰 */
+    --zh-color-chenxiang: rgb(153, 128, 108); /* 沉香 */
+    --zh-color-huanglu: rgb(226, 156, 69); /* 黄栌 */
+    --zh-color-xinghuang: rgb(218, 146, 51); /* 杏黄 */
+    --zh-color-chase: rgb(136, 118, 87); /* 茶色 */
+    --zh-color-yuse: rgb(234, 228, 209); /* 玉色 */
+    --zh-color-banjian: rgb(255, 251, 199); /* 半见 */
+    --zh-color-biluo: rgb(174, 208, 238); /* 碧落 */
+    --zh-color-mose: rgb(80, 97, 109); /* 墨色 */
+    --zh-color-huaqing: rgb(26, 40, 71); /* 花青 */
+    --zh-color-qinglian: rgb(128, 29, 174); /* 青莲 */
+    --zh-color-xueqing: rgb(176, 164, 227); /* 雪青 */
+    --zh-color-jiangzi: rgb(140, 67, 86); /* 绛紫 */
+    --zh-color-ningyezi: rgb(66, 34, 86); /* 凝夜紫 */
+    --zh-color-mujin: rgb(186, 121, 177); /* 木槿 */
+    --zh-color-yuepo: rgb(178, 182, 182); /* 月魄 */
+    --zh-color-yudubai: rgb(247, 244, 237); /* 鱼肚白 */
+    --zh-color-xuanqing: rgb(61, 59, 79); /* 玄青 */
+    --zh-color-gudinghui: rgb(147, 154, 162); /* 古鼎灰 */
+    --zh-color-haitianxia: rgb(243, 166, 148); /* 海天霞 */
+    --zh-color-dahong: rgb(255, 33, 33); /* 大红 */
+    --zh-color-yinhong: rgb(240, 86, 84); /* 银红 */
+    --zh-color-hedinghong: rgb(210, 71, 53); /* 鹤顶红 */
+    --zh-color-zitan: rgb(76, 34, 27); /* 紫檀 */
+    --zh-color-feihong: rgb(200, 60, 35); /* 绯红 */
+    --zh-color-shanlan: rgb(190, 210, 187); /* 山岚 */
+    --zh-color-lantiao: rgb(168, 183, 140); /* 兰苕 */
+    --zh-color-zhuqing: rgb(120, 146, 98); /* 竹青 */
+    --zh-color-youlv: rgb(0, 188, 18); /* 油绿 */
+    --zh-color-guanlv: rgb(42, 110, 63); /* 官绿 */
+    --zh-color-cangcui: rgb(81, 154, 115); /* 苍翠 */
 
     /* primary theme color. This will affect the entire websites color scheme: links, arrows, labels, ... */
-    --primary-color: #1779c4;
-    --primary-dark-color: #335c80;
-    --primary-light-color: #70b1e9;
-    --on-primary-color: #ffffff;
+    --primary-color-main: var(--zh-color-qingming);
+    --primary-color-side: var(--zh-color-mushanzi);
+    --primary-dark-color: var(--zh-color-qunqing);
+    --primary-light-color: var(--zh-color-jinse);
+    --on-primary-color: var(--zh-color-jiaoyu);
 
     /* page base colors */
-    --page-background-color: #ffffff;
-    --page-foreground-color: #2f4153;
-    --page-secondary-foreground-color: #6f7e8e;
+    --page-background-color: var(--zh-color-yuebai);
+    --memtitle-background: var(--zh-color-hanbaiyu);
+    --page-foreground-color: var(--zh-color-qinghui);
+    --page-secondary-foreground-color: var(--zh-color-muyunhui);
 
     /* color for all separators on the website: hr, borders, ... */
-    --separator-color: #dedede;
+    --separator-color: var(--zh-color-pinyue);
 
     /* border radius for all rounded components. Will affect many components, like dropdowns, memitems, codeblocks, ... */
     --border-radius-large: 8px;
@@ -65,7 +118,7 @@ html {
      * font-family: the normal font for text, headlines, menus
      * font-family-monospace: used for preformatted text in memtitle, code, fragments
      */
-    --font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    --font-family: "HarmonyOS Sans";
     --font-family-monospace: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
 
     /* font sizes */
@@ -85,32 +138,32 @@ html {
     --toc-max-height: calc(100vh - 2 * var(--spacing-medium) - 85px);
 
     /* colors for various content boxes: @warning, @note, @deprecated @bug */
-    --warning-color: #faf3d8;
-    --warning-color-dark: #f3a600;
-    --warning-color-darker: #5f4204;
-    --note-color: #e4f3ff;
-    --note-color-dark: #1879C4;
-    --note-color-darker: #274a5c;
-    --todo-color: #e4dafd;
-    --todo-color-dark: #5b2bdd;
-    --todo-color-darker: #2a0d72;
-    --deprecated-color: #ecf0f3;
-    --deprecated-color-dark: #5b6269;
-    --deprecated-color-darker: #43454a;
-    --bug-color: #f8d1cc;
-    --bug-color-dark: #b61825;
-    --bug-color-darker: #75070f;
-    --invariant-color: #d8f1e3;
-    --invariant-color-dark: #44b86f;
-    --invariant-color-darker: #265532;
+    --warning-color: var(--zh-color-yuse);
+    --warning-color-dark: var(--zh-color-xinghuang);
+    --warning-color-darker: var(--zh-color-chase);
+    --note-color: var(--zh-color-biluo);
+    --note-color-dark: var(--zh-color-qingming);
+    --note-color-darker: var(--zh-color-mose);
+    --todo-color: var(--zh-color-xueqing);
+    --todo-color-dark: var(--zh-color-qinglian);
+    --todo-color-darker: var(--zh-color-jiangzi);
+    --deprecated-color: var(--zh-color-yudubai);
+    --deprecated-color-dark: var(--zh-color-gudinghui);
+    --deprecated-color-darker: var(--zh-color-xuanqing);
+    --bug-color: var(--zh-color-haitianxia);
+    --bug-color-dark: var(--zh-color-dahong);
+    --bug-color-darker: var(--zh-color-yinhong);
+    --invariant-color: var(--zh-color-shanlan);
+    --invariant-color-dark: var(--zh-color-youlv);
+    --invariant-color-darker: var(--zh-color-zhuqing);
 
     /* blockquote colors */
-    --blockquote-background: #f8f9fa;
-    --blockquote-foreground: #636568;
+    --blockquote-background: var(--zh-color-ningzhi);
+    --blockquote-foreground: var(--zh-color-gudinghui);
 
     /* table colors */
-    --tablehead-background: #f1f1f1;
-    --tablehead-foreground: var(--page-foreground-color);
+    --tablehead-background: var(--zh-color-qingming);
+    --tablehead-foreground: var(--zh-color-yuse);
 
     /* menu-display: block | none
      * Visibility of the top navigation on screens >= 768px. On smaller screen the menu is always visible.
@@ -119,12 +172,12 @@ html {
     --menu-display: block;
 
     --menu-focus-foreground: var(--on-primary-color);
-    --menu-focus-background: var(--primary-color);
+    --menu-focus-background: var(--primary-color-main);
     --menu-selected-background: rgba(0,0,0,.05);
 
 
     --header-background: var(--page-background-color);
-    --header-foreground: var(--page-foreground-color);
+    --header-foreground: var(--zh-color-yuebai);
 
     /* searchbar colors */
     --searchbar-background: var(--side-nav-background);
@@ -138,27 +191,27 @@ html {
     --searchbar-border-radius: var(--searchbar-height);
 
     /* code block colors */
-    --code-background: #f5f5f5;
+    --code-background: var(--zh-color-ningzhi);
     --code-foreground: var(--page-foreground-color);
 
     /* fragment colors */
-    --fragment-background: #F8F9FA;
-    --fragment-foreground: #37474F;
-    --fragment-keyword: #bb6bb2;
-    --fragment-keywordtype: #8258b3;
-    --fragment-keywordflow: #d67c3b;
-    --fragment-token: #438a59;
-    --fragment-comment: #969696;
-    --fragment-link: #5383d6;
-    --fragment-preprocessor: #46aaa5;
-    --fragment-linenumber-color: #797979;
-    --fragment-linenumber-background: #f4f4f5;
-    --fragment-linenumber-border: #e3e5e7;
+    --fragment-background: var(--zh-color-ningzhi);
+    --fragment-foreground: var(--zh-color-qinghui);
+    --fragment-keyword: var(--zh-color-mujing);
+    --fragment-keywordtype: var(--zh-color-qinglian);
+    --fragment-keywordflow: var(--zh-color-xinghuang);
+    --fragment-token: var(--zh-color-guanlv);
+    --fragment-comment: var(--zh-color-gudinghui);
+    --fragment-link: var(--zh-color-qingming);
+    --fragment-preprocessor: var(--zh-color-cangcui);
+    --fragment-linenumber-color: var(--zh-color-gudinghui);
+    --fragment-linenumber-background: var(--zh-color-qingming);
+    --fragment-linenumber-border: var(--zh-color-pinyue);
     --fragment-lineheight: 20px;
 
     /* sidebar navigation (treeview) colors */
-    --side-nav-background: #fbfbfb;
-    --side-nav-foreground: var(--page-foreground-color);
+    --side-nav-background: var(--zh-color-ganyu);
+    --side-nav-foreground: var(--zh-color-jiaoyu);
     --side-nav-arrow-opacity: 0;
     --side-nav-arrow-hover-opacity: 0.9;
 
@@ -192,7 +245,8 @@ html {
     html:not(.light-mode) {
         color-scheme: dark;
 
-        --primary-color: #1982d2;
+        --primary-color-main: #1982d2;
+        --primary-color-side: #1982d2;
         --primary-dark-color: #86a9c4;
         --primary-light-color: #4779ac;
 
@@ -203,6 +257,7 @@ html {
         --menu-selected-background: rgba(0,0,0,.4);
 
         --page-background-color: #1C1D1F;
+        --memtitle-background: var(--fragment-background);
         --page-foreground-color: #d2dbde;
         --page-secondary-foreground-color: #859399;
         --separator-color: #38393b;
@@ -215,24 +270,24 @@ html {
         --blockquote-background: #222325;
         --blockquote-foreground: #7e8c92;
 
-        --warning-color: #3b2e04;
-        --warning-color-dark: #f1b602;
-        --warning-color-darker: #ceb670;
-        --note-color: #163750;
-        --note-color-dark: #1982D2;
-        --note-color-darker: #dcf0fa;
-        --todo-color: #2a2536;
-        --todo-color-dark: #7661b3;
-        --todo-color-darker: #ae9ed6;
-        --deprecated-color: #2e323b;
-        --deprecated-color-dark: #738396;
-        --deprecated-color-darker: #abb0bd;
-        --bug-color: #2e1917;
-        --bug-color-dark: #ad2617;
-        --bug-color-darker: #f5b1aa;
-        --invariant-color: #303a35;
-        --invariant-color-dark: #76ce96;
-        --invariant-color-darker: #cceed5;
+        --warning-color: var(--zh-color-chenxiang);
+        --warning-color-dark: var(--zh-color-huanglu);
+        --warning-color-darker: var(--zh-color-banjian);
+        --note-color: var(--zh-color-huaqing);
+        --note-color-dark: var(--zh-color-ganyu);
+        --note-color-darker: var(--zh-color-pinyue);
+        --todo-color: var(--zh-color-ningyezi);
+        --todo-color-dark: var(--zh-color-mujin);
+        --todo-color-darker: var(--zh-color-mushanzi);
+        --deprecated-color: var(--zh-color-qinghui);
+        --deprecated-color-dark: var(--zh-color-muyunhui);
+        --deprecated-color-darker: var(--zh-color-yuepo);
+        --bug-color: var(--zh-color-zitan);
+        --bug-color-dark: var(--zh-color-feihong);
+        --bug-color-darker: var(--zh-color-hedinghong);
+        --invariant-color: var(--zh-color-guanlv);
+        --invariant-color-dark: var(--zh-color-cangcui);
+        --invariant-color-darker: var(--zh-color-lantiao);
 
         --fragment-background: #282c34;
         --fragment-foreground: #dbe4eb;
@@ -253,7 +308,8 @@ html {
 html.dark-mode {
     color-scheme: dark;
 
-    --primary-color: #1982d2;
+    --primary-color-main: #1982d2;
+    --primary-color-side: #1982d2;
     --primary-dark-color: #86a9c4;
     --primary-light-color: #4779ac;
 
@@ -264,6 +320,7 @@ html.dark-mode {
     --menu-selected-background: rgba(0,0,0,.4);
 
     --page-background-color: #1C1D1F;
+    --memtitle-background: var(--fragment-background);
     --page-foreground-color: #d2dbde;
     --page-secondary-foreground-color: #859399;
     --separator-color: #38393b;
@@ -276,24 +333,24 @@ html.dark-mode {
     --blockquote-background: #222325;
     --blockquote-foreground: #7e8c92;
 
-    --warning-color: #3b2e04;
-    --warning-color-dark: #f1b602;
-    --warning-color-darker: #ceb670;
-    --note-color: #163750;
-    --note-color-dark: #1982D2;
-    --note-color-darker: #dcf0fa;
-    --todo-color: #2a2536;
-    --todo-color-dark: #7661b3;
-    --todo-color-darker: #ae9ed6;
-    --deprecated-color: #2e323b;
-    --deprecated-color-dark: #738396;
-    --deprecated-color-darker: #abb0bd;
-    --bug-color: #2e1917;
-    --bug-color-dark: #ad2617;
-    --bug-color-darker: #f5b1aa;
-    --invariant-color: #303a35;
-    --invariant-color-dark: #76ce96;
-    --invariant-color-darker: #cceed5;
+    --warning-color: var(--zh-color-chenxiang);
+    --warning-color-dark: var(--zh-color-huanglu);
+    --warning-color-darker: var(--zh-color-banjian);
+    --note-color: var(--zh-color-huaqing);
+    --note-color-dark: var(--zh-color-ganyu);
+    --note-color-darker: var(--zh-color-pinyue);
+    --todo-color: var(--zh-color-ningyezi);
+    --todo-color-dark: var(--zh-color-mujin);
+    --todo-color-darker: var(--zh-color-mushanzi);
+    --deprecated-color: var(--zh-color-qinghui);
+    --deprecated-color-dark: var(--zh-color-muyunhui);
+    --deprecated-color-darker: var(--zh-color-yuepo);
+    --bug-color: var(--zh-color-zitan);
+    --bug-color-dark: var(--zh-color-feihong);
+    --bug-color-darker: var(--zh-color-hedinghong);
+    --invariant-color: var(--zh-color-guanlv);
+    --invariant-color-dark: var(--zh-color-cangcui);
+    --invariant-color-darker: var(--zh-color-lantiao);
 
     --fragment-background: #282c34;
     --fragment-foreground: #dbe4eb;
@@ -337,7 +394,7 @@ p.reference, p.definition {
 }
 
 a:link, a:visited, a:hover, a:focus, a:active {
-    color: var(--primary-color) !important;
+    color: var(--primary-color-main) !important;
     font-weight: 500;
     background: none;
 }
@@ -606,8 +663,8 @@ a.anchor {
 }
 
 #MSearchBox.MSearchBoxActive {
-    border-color: var(--primary-color);
-    box-shadow: inset 0 0 0 1px var(--primary-color);
+    border-color: var(--primary-color-main);
+    box-shadow: inset 0 0 0 1px var(--primary-color-main);
 }
 
 #main-menu > li:last-child {
@@ -830,7 +887,7 @@ html.dark-mode iframe#MSearchResults {
     background-image: none;
     background-color: transparent;
     position: relative;
-    color: var(--primary-color) !important;
+    color: var(--primary-color-side) !important;
     font-weight: 500;
 }
 
@@ -842,7 +899,7 @@ html.dark-mode iframe#MSearchResults {
     left: 0;
     width: 4px;
     border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
-    background: var(--primary-color);
+    background: var(--primary-color-side);
 }
 
 
@@ -876,7 +933,7 @@ html.dark-mode iframe#MSearchResults {
 }
 
 #nav-tree .selected a {
-    color: var(--primary-color) !important;
+    color: var(--primary-color-side) !important;
     font-weight: bolder;
     font-weight: 600;
 }
@@ -948,7 +1005,7 @@ td.memSeparator {
 }
 
 span.mlabel {
-    background: var(--primary-color);
+    background: var(--primary-color-main);
     color: var(--on-primary-color);
     border: none;
     padding: 4px 9px;
@@ -1074,7 +1131,7 @@ table.params .paramname {
 }
 
 h1.glow, h2.glow, h3.glow, h4.glow, h5.glow, h6.glow {
-    text-shadow: 0 0 15px var(--primary-light-color);
+    text-shadow: 0 0 20px var(--primary-light-color);
 }
 
 .alphachar a {
@@ -1142,7 +1199,7 @@ div.toc li a {
 }
 
 div.toc li a:hover, div.toc li a.active {
-    color: var(--primary-color) !important;
+    color: var(--primary-color-main) !important;
 }
 
 div.toc li a.aboveActive {
@@ -1187,7 +1244,7 @@ div.toc li a.aboveActive {
         height: 0; 
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
-        border-top: 5px solid var(--primary-color);
+        border-top: 5px solid var(--primary-color-main);
         display: inline-block;
         margin-right: var(--spacing-small);
         margin-bottom: calc(var(--navigation-font-size) / 4);
@@ -1206,7 +1263,7 @@ div.toc li a.aboveActive {
     }
 
     div.contents .toc a, div.contents .toc a.active {
-        color: var(--primary-color) !important;
+        color: var(--primary-color-main) !important;
     }
 
     div.contents .toc a:hover {
@@ -1469,7 +1526,7 @@ h2.memtitle, div.memitem {
 }
 
 h2.memtitle {
-    box-shadow: 0px var(--spacing-medium) 0 -1px var(--fragment-background), var(--box-shadow);
+    box-shadow: 0px var(--spacing-medium) 0 -1px var(--memtitle-background), var(--box-shadow);
 }
 
 div.memitem {
@@ -1477,7 +1534,7 @@ div.memitem {
 }
 
 div.memproto, h2.memtitle {
-    background: var(--fragment-background);
+    background: var(--memtitle-background);
 }
 
 h2.memtitle {
@@ -1494,7 +1551,7 @@ h2.memtitle {
 h2.memtitle:after {
     content: "";
     display: block;
-    background: var(--fragment-background);
+    background: var(--memtitle-background);
     height: var(--spacing-medium);
     bottom: calc(0px - var(--spacing-medium));
     left: 0;
@@ -1804,7 +1861,7 @@ table.memberdecls .memTemplParams {
     padding-bottom: var(--spacing-small);
     border-top: 1px solid var(--separator-color);
     border-bottom: 1px solid var(--separator-color);
-    background-color: var(--fragment-background);
+    background-color: var(--memtitle-background);
 }
 
 table.memberdecls .memTemplItemLeft,
@@ -1884,7 +1941,7 @@ div.dynheader img[src="closed.png"] {
     height: 0; 
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 5px solid var(--primary-color);
+    border-top: 5px solid var(--primary-color-main);
     margin-top: 8px;
     display: block;
     float: left;
@@ -2079,7 +2136,7 @@ table.directory tr.odd {
 }
 
 .icon {
-    background: var(--primary-color);
+    background: var(--primary-color-main);
     border-radius: var(--border-radius-small);
     font-size: var(--page-font-size);
     padding: calc(var(--page-font-size) / 5);
@@ -2198,7 +2255,7 @@ address.footer {
 .navpath li.navelem a {
     text-shadow: none;
     display: inline-block;
-    color: var(--primary-color) !important;
+    color: var(--primary-color-main) !important;
 }
 
 .navpath li.navelem b {
@@ -2241,7 +2298,7 @@ li.navelem:first-child:before {
 }
 
 .navpath li.navelem a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color-main);
 }
 
 /*
@@ -2570,7 +2627,7 @@ h2:hover a.anchorlink, h1:hover a.anchorlink, h3:hover a.anchorlink, h4:hover a.
     width: 0%;
     margin: 0 auto;
     border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-main);
     transition: width var(--animation-duration) ease-in-out, height var(--animation-duration) ease-in-out;
 }
 
