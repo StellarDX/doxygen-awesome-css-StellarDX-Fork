@@ -28,6 +28,10 @@ SOFTWARE.
 */
 
 html {
+    /* 中国传统色 */
+    --zh-color-ganyu: rgb(0, 61, 116);
+    --zh-color-yuebai: rgb(212, 229, 239);
+
     /* primary theme color. This will affect the entire websites color scheme: links, arrows, labels, ... */
     --primary-color: #1779c4;
     --primary-dark-color: #335c80;
