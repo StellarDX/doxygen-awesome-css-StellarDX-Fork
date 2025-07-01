@@ -38,7 +38,8 @@ SOFTWARE.
          url('HarmonyOS_Sans_SC_Thin.ttf') format('ttf');
 }
 
-html {
+html 
+{
     /* 中国传统色 (StellarDX) */
     --zh-color-ganyu: rgb(0, 61, 116); /* 绀宇 */
     --zh-color-yuebai: rgb(212, 229, 239); /* 月白 */
@@ -82,6 +83,7 @@ html {
     --zh-color-youlv: rgb(0, 188, 18); /* 油绿 */
     --zh-color-guanlv: rgb(42, 110, 63); /* 官绿 */
     --zh-color-cangcui: rgb(81, 154, 115); /* 苍翠 */
+    --zh-color-jinyu: rgb(30, 39, 50); /* 瑾瑜 */
 
     /* primary theme color. This will affect the entire websites color scheme: links, arrows, labels, ... */
     --primary-color-main: var(--zh-color-qingming);
@@ -197,7 +199,7 @@ html {
     /* fragment colors */
     --fragment-background: var(--zh-color-ningzhi);
     --fragment-foreground: var(--zh-color-qinghui);
-    --fragment-keyword: var(--zh-color-mujing);
+    --fragment-keyword: var(--zh-color-mujin);
     --fragment-keywordtype: var(--zh-color-qinglian);
     --fragment-keywordflow: var(--zh-color-xinghuang);
     --fragment-token: var(--zh-color-guanlv);
@@ -241,14 +243,15 @@ html {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) 
+{
     html:not(.light-mode) {
         color-scheme: dark;
 
-        --primary-color-main: #1982d2;
-        --primary-color-side: #1982d2;
-        --primary-dark-color: #86a9c4;
-        --primary-light-color: #4779ac;
+        --primary-color-main: var(--zh-color-xinghuang);
+        --primary-color-side: var(--zh-color-chenxiang);
+        --primary-dark-color: var(--zh-color-jiaoyu);
+        --primary-light-color: var(--zh-color-pinyue);
 
         --box-shadow: 0 2px 8px 0 rgba(0,0,0,.35);
 
@@ -256,19 +259,19 @@ html {
 
         --menu-selected-background: rgba(0,0,0,.4);
 
-        --page-background-color: #1C1D1F;
-        --memtitle-background: var(--fragment-background);
-        --page-foreground-color: #d2dbde;
-        --page-secondary-foreground-color: #859399;
-        --separator-color: #38393b;
-        --side-nav-background: #252628;
+        --page-background-color: var(--zh-color-jinyu);
+        --memtitle-background: var(--zh-color-xuanqing);
+        --page-foreground-color: var(--zh-color-hanbaiyu);
+        --page-secondary-foreground-color: var(--zh-color-gudinghui);
+        --separator-color: var(--zh-color-jinse);
+        --side-nav-background: var(--zh-color-zitan);
 
-        --code-background: #2a2c2f;
+        --code-background: var(--zh-color-huaqing);
 
-        --tablehead-background: #2a2c2f;
-    
-        --blockquote-background: #222325;
-        --blockquote-foreground: #7e8c92;
+        --tablehead-background: var(--zh-color-ningyezi);
+
+        --blockquote-background: var(--zh-color-jinyu);
+        --blockquote-foreground: var(--zh-color-yuepo);
 
         --warning-color: var(--zh-color-chenxiang);
         --warning-color-dark: var(--zh-color-huanglu);
@@ -289,29 +292,30 @@ html {
         --invariant-color-dark: var(--zh-color-cangcui);
         --invariant-color-darker: var(--zh-color-lantiao);
 
-        --fragment-background: #282c34;
-        --fragment-foreground: #dbe4eb;
-        --fragment-keyword: #cc99cd;
-        --fragment-keywordtype: #ab99cd;
-        --fragment-keywordflow: #e08000;
-        --fragment-token: #7ec699;
-        --fragment-comment: #999999;
-        --fragment-link: #98c0e3;
-        --fragment-preprocessor: #65cabe;
-        --fragment-linenumber-color: #cccccc;
-        --fragment-linenumber-background: #35393c;
-        --fragment-linenumber-border: #1f1f1f;
+        --fragment-background: var(--zh-color-huaqing);
+        --fragment-foreground: var(--zh-color-yuebai);
+        --fragment-keyword: var(--zh-color-mujin);
+        --fragment-keywordtype: var(--zh-color-xueqing);
+        --fragment-keywordflow: var(--zh-color-huanglu);
+        --fragment-token: var(--zh-color-shanlan);
+        --fragment-comment: var(--zh-color-mose);
+        --fragment-link: var(--zh-color-mushanzi);
+        --fragment-preprocessor: var(--zh-color-zhuqing);
+        --fragment-linenumber-color: var(--zh-color-biluo);
+        --fragment-linenumber-background: var(--zh-color-ningyezi);
+        --fragment-linenumber-border: var(--zh-color-jinse);
     }
 }
 
 /* dark mode variables are defined twice, to support both the dark-mode without and with doxygen-awesome-darkmode-toggle.js */
-html.dark-mode {
+html.dark-mode 
+{
     color-scheme: dark;
 
-    --primary-color-main: #1982d2;
-    --primary-color-side: #1982d2;
-    --primary-dark-color: #86a9c4;
-    --primary-light-color: #4779ac;
+    --primary-color-main: var(--zh-color-xinghuang);
+    --primary-color-side: var(--zh-color-chenxiang);
+    --primary-dark-color: var(--zh-color-jiaoyu);
+    --primary-light-color: var(--zh-color-pinyue);
 
     --box-shadow: 0 2px 8px 0 rgba(0,0,0,.30);
 
@@ -319,19 +323,19 @@ html.dark-mode {
 
     --menu-selected-background: rgba(0,0,0,.4);
 
-    --page-background-color: #1C1D1F;
-    --memtitle-background: var(--fragment-background);
-    --page-foreground-color: #d2dbde;
-    --page-secondary-foreground-color: #859399;
-    --separator-color: #38393b;
-    --side-nav-background: #252628;
+    --page-background-color: var(--zh-color-jinyu);
+    --memtitle-background: var(--zh-color-xuanqing);
+    --page-foreground-color: var(--zh-color-hanbaiyu);
+    --page-secondary-foreground-color: var(--zh-color-gudinghui);
+    --separator-color: var(--zh-color-jinse);
+    --side-nav-background: var(--zh-color-zitan);
 
-    --code-background: #2a2c2f;
+    --code-background: var(--zh-color-huaqing);
 
-    --tablehead-background: #2a2c2f;
+    --tablehead-background: var(--zh-color-ningyezi);
 
-    --blockquote-background: #222325;
-    --blockquote-foreground: #7e8c92;
+    --blockquote-background: var(--zh-color-jinyu);
+    --blockquote-foreground: var(--zh-color-yuepo);
 
     --warning-color: var(--zh-color-chenxiang);
     --warning-color-dark: var(--zh-color-huanglu);
@@ -352,18 +356,18 @@ html.dark-mode {
     --invariant-color-dark: var(--zh-color-cangcui);
     --invariant-color-darker: var(--zh-color-lantiao);
 
-    --fragment-background: #282c34;
-    --fragment-foreground: #dbe4eb;
-    --fragment-keyword: #cc99cd;
-    --fragment-keywordtype: #ab99cd;
-    --fragment-keywordflow: #e08000;
-    --fragment-token: #7ec699;
-    --fragment-comment: #999999;
-    --fragment-link: #98c0e3;
-    --fragment-preprocessor: #65cabe;
-    --fragment-linenumber-color: #cccccc;
-    --fragment-linenumber-background: #35393c;
-    --fragment-linenumber-border: #1f1f1f;
+    --fragment-background: var(--zh-color-huaqing);
+    --fragment-foreground: var(--zh-color-yuebai);
+    --fragment-keyword: var(--zh-color-mujin);
+    --fragment-keywordtype: var(--zh-color-xueqing);
+    --fragment-keywordflow: var(--zh-color-huanglu);
+    --fragment-token: var(--zh-color-shanlan);
+    --fragment-comment: var(--zh-color-mose);
+    --fragment-link: var(--zh-color-mushanzi);
+    --fragment-preprocessor: var(--zh-color-zhuqing);
+    --fragment-linenumber-color: var(--zh-color-biluo);
+    --fragment-linenumber-background: var(--zh-color-ningyezi);
+    --fragment-linenumber-border: var(--zh-color-jinse);
 }
 
 body {
